@@ -7,7 +7,7 @@ const Actions = () => {
     
     const share = async () => {
         await navigator.clipboard.writeText(location.href)
-        toast.success("Copied to clipboard")    
+        toast.success("Copied link to clipboard")    
     }
     const download = () => {
         window.location.href = `${import.meta.env.VITE_BASE_URL}download/${uploadedImage.image.filename}`
