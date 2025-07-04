@@ -41,7 +41,6 @@ const ImageUploaderBox = () => {
         try {
             const formData = new FormData()
             formData.append("image", data.image)
-            console.log(import.meta.env.VITE_BASE_URL);
             
             const response = await fetch(`${import.meta.env.VITE_BASE_URL}upload`, {
                 method: "POST",
