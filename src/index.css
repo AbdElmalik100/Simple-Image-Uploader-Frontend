@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+@theme {
+  /* Strong blue - buttons, links */
+  --color-primary: #3662E3;
+  /* Light blue - hover, backgrounds */
+  --color-primary-light: #C2DAF9;
+  /* Very dark - body background */
+  --color-background-dark: #121826;
+  /* Light gray - borders, dividers */
+  --color-border: #E5E7EB;
+  /* Almost white - main container bg */
+  --color-background-light: #F9FAFBCC;
+  /* Dark bluish - cards, modals */
+  --color-surface-dark: #212936;
+  /* Muted text color */
+  --color-text-muted: #4D5562;
+  /* Semi-transparent light overlay */
+  --color-overlay-light: #F9FAFB;
+
+  --font-Inter: "Inter", sans-serif;
+}
+
+* {
+  @apply box-border
+}
+
+body {
+  @apply text-base font-Inter bg-background-light dark:bg-background-dark text-text-muted dark:text-overlay-light transition-all ease-out
+}
+
+button {
+  @apply rounded-lg cursor-pointer transition-all ease-out flex items-center justify-center gap-2
+}
+
+
+@keyframes loading {
+  0% {
+    left: -25%;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
